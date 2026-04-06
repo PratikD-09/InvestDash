@@ -68,7 +68,7 @@ export default function CorporateDashboardPage() {
 
     return (
         <main className="min-h-screen !p-6 md:!p-8" style={{ backgroundColor: 'var(--bg)' }}>
-            <div className="!max-w-7xl mx-auto">
+            <div className="mx-auto">
                 <div className="!mb-8">
                     <h1 className="text-4xl font-bold !mb-2">Corporate Dashboard</h1>
                     <p className="text-muted">Investment portfolio and fundraising analytics</p>
@@ -103,9 +103,9 @@ export default function CorporateDashboardPage() {
                 </div>
 
                 {/* Charts Row 1 */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 !gap-6 mb-8">
                     {/* Investor Growth */}
-                    <Card className="!p-5 rounded-2xl shadow-sm">
+                    <Card className="!p-5  rounded-2xl shadow-sm">
 
                         {/* 🔷 HEADER */}
                         <div className="flex items-center justify-between mb-4">
@@ -198,7 +198,7 @@ export default function CorporateDashboardPage() {
 
                     {/* Conversion Funnel */}
                     <div>
-                        <Card className="!p-5 rounded-2xl shadow-sm">
+                        <Card className="!p-5 !mb-8 rounded-2xl shadow-sm">
 
                             {/* 🔷 HEADER */}
                             <div className="flex items-center justify-between mb-4">
@@ -267,7 +267,7 @@ export default function CorporateDashboardPage() {
 
                 {/* Performance Radar */}
                 <div className="grid grid-cols-1 gap-6 mb-8">
-                    <Card className="!p-5 rounded-2xl shadow-sm">
+                    <Card className="!p-5 !mb-8 rounded-2xl shadow-sm">
 
                         {/* 🔷 HEADER */}
                         <div className="flex items-center justify-between mb-4">
@@ -325,7 +325,7 @@ export default function CorporateDashboardPage() {
                 {/* Top Investors */}
                 <Card>
                     <h3 className="font-semibold !mb-4">Top Investors by ROI</h3>
-                    <div className="!space-y-3">
+                    <div className="!space-y-3 grid grid-cols-2">
                         {[...investors]
                             .sort((a, b) => b.averageROI - a.averageROI)
                             .slice(0, 8)

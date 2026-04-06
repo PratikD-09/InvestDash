@@ -45,7 +45,7 @@ export default function DealDetailsPage() {
 
     return (
         <main className="min-h-screen p-6 md:p-8" style={{ backgroundColor: 'var(--bg)' }}>
-            <div className="max-w-5xl mx-auto">
+            <div className=" mx-auto">
                 {/* Header */}
                 <div className="mb-8">
                     <Link href={'/deals'}>
@@ -63,15 +63,15 @@ export default function DealDetailsPage() {
                 </div>
 
                 {/* Overview Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 !mb-8">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 !mb-8">
                     <Card>
                         <p className="text-sm text-muted mb-2">Expected ROI</p>
-                        <h3 className="text-2xl font-bold text-success">{deal.roi}%</h3>
+                        <h3 className="text-2xl font-bold ">{deal.roi}%</h3>
                     </Card>
                     <Card>
                         <p className="text-sm text-muted mb-2">Risk Score</p>
-                        <h3 className="text-2xl font-bold">{deal.riskScore}</h3>
-                        <p className="text-sm text-muted mt-1">{getRiskLabel(deal.riskScore)}</p>
+                        <h3 className="text-2xl font-bold ">{deal.riskScore}</h3>
+                        {/* <p className="text-sm text-muted mt-1">{getRiskLabel(deal.riskScore)}</p> */}
                     </Card>
                     <Card>
                         <p className="text-sm text-muted mb-2">Target Raise</p>
@@ -270,11 +270,11 @@ export default function DealDetailsPage() {
                         </Card>
 
                         {/* Actions */}
-                        <div className="!space-y-2">
-                            <Button variant="primary"  className="w-full">
+                        <div className="flex justify-center gap-2 !space-y-2 ">
+                            <Button variant="primary"  className="w-[200px] ">
                                 Add to Interests
                             </Button>
-                            <Button variant="secondary" className="w-full">
+                            <Button variant="secondary" className="w-[200px]">
                                 Share Deal
                             </Button>
                         </div>

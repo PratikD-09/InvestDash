@@ -74,8 +74,8 @@ export default function Home() {
   }));
 
   return (
-    <main className="min-h-screen p-6 md:p-8" style={{ backgroundColor: 'var(--bg)' }}>
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen !w-[100%] p-6 md:p-8" style={{ backgroundColor: 'var(--bg)' }}>
+      <div className="  mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Investor Dashboard</h1>
           <p className="text-muted m-2">Your investment overview and analytics</p>
@@ -241,14 +241,14 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className='m-4'>
+        <div className='m-4  '>
           <Card>
             <h3 className="font-semibold mb-4">Featured Deals</h3>
-            <div className="space-y-3">
+            <div className="space-y-3 grid grid-cols-2">
               {deals.slice(0, 5).map(deal => (
                 <div
                   key={deal.id}
-                  className="flex m-2 p-2 items-center justify-between p-3 border border-transparent hover:border-opacity-50 rounded hover:bg-opacity-50 transition"
+                  className="flex p-2  items-center justify-between border border-transparent hover:border-opacity-50 rounded hover:bg-opacity-50 transition"
                   style={{ borderColor: 'var(--border)' }}
                 >
                   <div className="flex-1">

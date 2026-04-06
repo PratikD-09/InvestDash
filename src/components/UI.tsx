@@ -48,7 +48,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
   action,
 }) => {
   return (
-    <div className="flex-center flex-col gap-4 py-12">
+    <div className="flex-center justify-center align-middle h-[50vh] flex-col gap-4 py-12">
       {icon && <div className="text-4xl opacity-50">{icon}</div>}
       <h3 className="font-semibold text-lg">{title}</h3>
       {description && <p className="text-sm text-muted">{description}</p>}

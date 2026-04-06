@@ -25,14 +25,14 @@ export default function Navbar() {
 
   return (
     
-    <nav className="sticky top-0 !w-[100%] !pl-4 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
-      <div className="!max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex h-16 items-center justify-between gap-4">
+    <nav className="sticky top-0  !pl-4 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
+      <div className="!  mx-auto !px-4 md:px-8">
+        <div className="flex h-16 items-center justify-between !gap-4">
           <Link href="/" className="font-bold text-xl tracking-tight text-foreground">
             <span className="text-primary">Invest</span>Dash
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center !gap-8">
             {navItems.map(item => (
               <Link
                 key={item.href}

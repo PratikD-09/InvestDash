@@ -51,7 +51,7 @@ export default function MyPortfolioPage() {
 
   return (
     <main className="min-h-screen p-6 md:p-8" style={{ backgroundColor: 'var(--bg)' }}>
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto ">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">My Portfolio</h1>
           <p className="text-muted">Deals you're interested in</p>
@@ -77,6 +77,7 @@ export default function MyPortfolioPage() {
 
         {/* Deals List */}
         {myInterestDeals.length === 0 ? (
+          
           <EmptyState
             icon="📊"
             title="No deals in your portfolio yet"

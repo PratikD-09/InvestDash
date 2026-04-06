@@ -49,7 +49,7 @@ export default function InvestorsPage() {
 
   return (
     <main className="min-h-screen !p-6 md:!p-8" style={{ backgroundColor: 'var(--bg)' }}>
-      <div className="max-w-6xl mx-auto">
+      <div className=" mx-auto">
         <div className="!mb-8">
           <h1 className="text-4xl font-bold !mb-2">Investors</h1>
           <p className="text-muted">Explore and connect with investment partners</p>
@@ -100,7 +100,7 @@ export default function InvestorsPage() {
           />
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mb-8">
               {investors.map(investor => (
                 <Card key={investor.id} className="cursor-pointer hover:border-primary transition">
                   <div className="flex items-start justify-between mb-4">
