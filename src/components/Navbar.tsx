@@ -24,8 +24,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    
+    <nav className="sticky top-0 !w-[100%] !pl-4 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
+      <div className="!max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" className="font-bold text-xl tracking-tight text-foreground">
             <span className="text-primary">Invest</span>Dash
@@ -51,10 +52,10 @@ export default function Navbar() {
             variant="secondary"
             size="sm"
             onClick={() => dispatch(toggleTheme())}
-            className="gap-2"
+            className="gap-2 p-2"
           >
             {/* shadcn Button used for theme toggle */}
-            {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            {theme === 'dark' ? <Sun className="h-4 w-6" /> : <Moon className="h-4 w-4" />}
           </Button>
         </div>
       </div>

@@ -27,7 +27,7 @@ const initialState: DealsState = {
   deals: [],
   currentDeal: null,
   total: 0,
-  page: 1,
+  page: 1 , 
   pageSize: 10,
   totalPages: 0,
   loading: false,

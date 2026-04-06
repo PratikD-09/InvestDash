@@ -48,20 +48,21 @@ export default function InvestorsPage() {
   };
 
   return (
-    <main className="min-h-screen p-6 md:p-8" style={{ backgroundColor: 'var(--bg)' }}>
+    <main className="min-h-screen !p-6 md:!p-8" style={{ backgroundColor: 'var(--bg)' }}>
       <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Investors</h1>
+        <div className="!mb-8">
+          <h1 className="text-4xl font-bold !mb-2">Investors</h1>
           <p className="text-muted">Explore and connect with investment partners</p>
         </div>
 
         {/* Filters */}
-        <Card className="mb-8 p-6">
-          <h3 className="font-semibold mb-6">Filters</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card className="!mb-8 p-6">
+          <h3 className="font-semibold !mb-6">Filters</h3>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
             <div className="form-group">
               <label className="text-sm font-semibold">Search</label>
               <Input
+                className='!p-3'
                 type="text"
                 placeholder="Investor name or portfolio..."
                 value={search}
@@ -74,6 +75,7 @@ export default function InvestorsPage() {
               <label className="text-sm font-semibold">Risk Profile</label>
               <Select
                 value={selectedRisk}
+                className='!p-3'
                 onChange={e => setSelectedRisk(e.target.value)}
               >
                 <option value="">All Risk Profiles</option>
@@ -178,8 +180,9 @@ export default function InvestorsPage() {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mt-8">
+              <div className="flex justify-center items-center gap-2 !mt-8">
                 <Button
+                    className='m-2 p-2'
                   variant="secondary"
                   onClick={() => handlePageChange(page - 1)}
                   disabled={page === 1}
@@ -188,6 +191,7 @@ export default function InvestorsPage() {
                 </Button>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
                   <Button
+                  className='m-2 w-2 h-2 p-2'
                     key={p}
                     variant={page === p ? 'primary' : 'secondary'}
                     onClick={() => handlePageChange(p)}
@@ -196,6 +200,7 @@ export default function InvestorsPage() {
                   </Button>
                 ))}
                 <Button
+                className='m-2 p-2'
                   variant="secondary"
                   onClick={() => handlePageChange(page + 1)}
                   disabled={page === totalPages}
@@ -205,7 +210,7 @@ export default function InvestorsPage() {
               </div>
             )}
 
-            <p className="text-center text-sm text-muted mt-6">
+            <p className="text-center text-sm text-muted !mt-6">
               Showing {investors.length} of {total} investors
             </p>
           </>
