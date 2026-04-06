@@ -6,6 +6,14 @@ export { Badge } from '@/components/ui/badge';
 export { Input } from '@/components/ui/input';
 export { Select } from '@/components/ui/select';
 export { SummaryCard } from '@/components/ui/summary-card';
+export {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
